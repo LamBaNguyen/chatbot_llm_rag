@@ -1,0 +1,15 @@
+.env
+/env-elasticsearch/
+/data/
+index_name.txt
+test.py
+/backend/model/models
+/backend/elasticsearch_setup/
+/backend/ingest/
+/backend/search/
+/backend/__pycache__/
+/backend/llm.py
+/backend/chunk_outputs/
+/backend/model/models.zip
+/frontend/node_modules/
+

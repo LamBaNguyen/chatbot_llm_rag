@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+elasticsearch
+openai
+python-dotenv
+tiktoken
+sentence-transformers
+huggingface_hub

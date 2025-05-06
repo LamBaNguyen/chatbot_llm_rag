@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tùy chỉnh giao diện */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Đảm bảo Markdown hiển thị đẹp */
+.markdown-content p {
+  margin: 0.5rem 0;
+}
+
+.markdown-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content strong {
+  font-weight: 700;
+}
+
+/* Hiệu ứng động */
+@keyframes fade-slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes typing {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-slide-right {
+  animation: fade-slide-right 0.3s ease-out forwards;
+}
+
+.animate-fade-slide-left {
+  animation: fade-slide-left 0.3s ease-out forwards;
+}
+
+.animate-typing {
+  animation: typing 1.5s infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* CSS responsive cho sidebar */
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+  transform: translateX(-100%);
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+
+/* Desktop (≥ 640px) */
+@media (min-width: 640px) {
+  .sidebar {
+    position: static;
+    transform: translateX(0);
+    height: auto;
+  }
+
+  .sidebar-open,
+  .sidebar-closed {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile (< 640px) */
+@media (max-width: 639px) {
+  .sidebar {
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Điều chỉnh tin nhắn trên mobile */
+  .message-content {
+    font-size: 0.875rem; /* 14px */
+    padding: 0.75rem; /* Padding nhỏ hơn */
+  }
+
+  /* Điều chỉnh khu vực chat */
+  .chat-area {
+    margin-top: 3rem; /* Để tránh nút toggle */
+  }
+}
+
+/* Tablet (640px - 1024px) */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sidebar {
+    width: 30%;
+  }
+}
