@@ -430,7 +430,7 @@ function App() {
           ))}
           {/* Link đến GitHub source */}
           <a
-            href="https://github.com/LamBaNguyen/chatbot_with_rag_llm"
+            href="https://github.com/LamBaNguyen/chatbot_llm_rag"
             target="_blank"
             className="mt-auto text-blackmt-auto text-black hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 text-center text-xs font-light-400 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600 block text-center"
           >
